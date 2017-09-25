@@ -2,6 +2,7 @@ package com.example.demo.magasinservice.webservice;
 
 import com.example.demo.magasinservice.domain.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.hateoas.Resource;
 import org.springframework.http.HttpMethod;
@@ -22,7 +23,7 @@ public class MagasinWS {
     public Resource<Employee> getEmployee() {
         return restTemplate
                 .exchange(
-                    "http://localhost:8181/employees/1",
+                    "http://employee-service/employees/1",
                     HttpMethod.GET,
                     null,
                     new ParameterizedTypeReference<Resource<Employee>>() {})
