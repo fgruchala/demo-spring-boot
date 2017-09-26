@@ -13,7 +13,7 @@ The goal is to show :
 
 ## Branches
 
-You are here **step 3** creation of your firt domain with Lombok.
+You are here : **step 3** creation of your firt domain with Lombok.
 
 
 ## Contacts via ...
